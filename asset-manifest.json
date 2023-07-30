@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/wordWizard/static/css/main.31d6cfe0.css",
+    "main.js": "/wordWizard/static/js/main.f868bec4.js",
+    "static/js/787.28cb0dcd.chunk.js": "/wordWizard/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/wordWizard/index.html",
+    "main.f868bec4.js.map": "/wordWizard/static/js/main.f868bec4.js.map",
+    "787.28cb0dcd.chunk.js.map": "/wordWizard/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.f868bec4.js"
+  ]
+}
