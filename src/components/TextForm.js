@@ -84,22 +84,23 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-1" onClick={handleUpclick}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpclick}>
           Convert to upper case
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleFirstCapital}>
+        <button disabled={text.length===0}  className="btn btn-primary mx-2 my-2" onClick={handleFirstCapital}>
         Capitalize the first letter of each word 
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleLowerclick}>
+        <button disabled={text.length===0}  className="btn btn-primary mx-2 my-2" onClick={handleLowerclick}>
           Convert to lower case
         </button>
         <button
+        disabled={text.length===0} 
           className="btn btn-primary mx-1"
           onClick={handlecopyToClipboard}
         >
           Copy text
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleClear}>
+        <button disabled={text.length===0}  className="btn btn-primary mx-1" onClick={handleClear}>
           Clear text
         </button>
       </div>
@@ -109,9 +110,9 @@ export default function TextForm(props) {
       >
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").length - 1} words,{text.length} characters
+          {text.split(" ").filter((element)=>{return element.length!==0}).length} words,{text.length} characters
         </p>
-        <p>{0.008 * (text.split(" ").length - 1)} Minute read</p>
+        <p>{0.008 * (text.split(" ").filter((element)=>{return element.length!==0}).length)} Minute read</p>
         <h3>Preview</h3>
         <p>{text.length>0?text:"Enter something in textbox to preview here"}</p>
       </div>
